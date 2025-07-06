@@ -1,6 +1,7 @@
 tellraw @a {text:"Loaded MChess (Datapack Edition)!"}
 
 forceload add -1 -1 0 0
+place template mchess:board/planks 0 127 0
 
 # ray calculation
 scoreboard objectives add mchess.ray.x dummy
