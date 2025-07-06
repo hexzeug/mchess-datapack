@@ -1,0 +1,1 @@
+$execute if data storage mchess:stringtools {char:"$(separator)"} run function mchess:stringtools/split.yield with storage mchess:stringtools
