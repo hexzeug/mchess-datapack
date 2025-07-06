@@ -1,0 +1,1 @@
+function mchess:stringtools/eval.macro with storage mchess:stringtools
