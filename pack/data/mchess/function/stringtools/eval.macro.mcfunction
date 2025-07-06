@@ -1,1 +1,1 @@
-$execute store result score .stringtools.value mchess run data modify storage mchess:stringtools value set value $(string)
+$data modify storage mchess:stringtools value set value $(string)

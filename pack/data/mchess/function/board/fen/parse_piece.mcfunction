@@ -17,11 +17,16 @@ execute if data storage mchess:stringtools {char:'K'} run data modify storage mc
 execute if data storage mchess:stringtools piece run data modify storage mchess:stringtools piece.pos set from storage mchess:stringtools square
 data modify storage mchess:board pieces append from storage mchess:stringtools piece
 
-# increment file by piece width (can be greater for empty squares)
-scoreboard players set .stringtools.value mchess 1
+# eval piece width for empty square notation
 data modify storage mchess:stringtools backup append from storage mchess:stringtools string
 data modify storage mchess:stringtools string set from storage mchess:stringtools char
 execute unless data storage mchess:stringtools piece run function mchess:stringtools/eval
+execute store result score .stringtools.value mchess run data get storage mchess:stringtools value
 data modify storage mchess:stringtools string set from storage mchess:stringtools backup[-1]
 data remove storage mchess:stringtools backup[-1]
+
+# set piece width for actual piece
+execute if data storage mchess:stringtools piece run scoreboard players set .stringtools.value mchess 1
+
+# increment by piece width
 execute store result storage mchess:stringtools square.file int 1 run scoreboard players operation .stringtools.square.file mchess += .stringtools.value mchess
