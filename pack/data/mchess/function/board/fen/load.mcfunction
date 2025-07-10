@@ -11,9 +11,8 @@ data modify storage mchess:stringtools string set from storage mchess:stringtool
 function mchess:stringtools/foreach {callback:"function mchess:board/fen/parse_castle"}
 
 data modify storage mchess:stringtools string set from storage mchess:stringtools segments[3]
-data remove storage mchess:stringtools square
-execute unless data storage mchess:stringtools {string:"-"} run function mchess:board/square_position
-data modify storage mchess:board en_passant set from storage mchess:stringtools square
+execute unless data storage mchess:stringtools {string:"-"} run function mchess:chesstools/square_position
+execute unless data storage mchess:stringtools {string:"-"} run data modify storage mchess:board en_passant set from storage mchess:chesstools square
 
 data modify storage mchess:stringtools string set from storage mchess:stringtools segments[4]
 function mchess:stringtools/eval
@@ -27,5 +26,5 @@ data modify storage mchess:board move_number set from storage mchess:stringtools
 data modify storage mchess:stringtools string set from storage mchess:stringtools segments[0]
 function mchess:stringtools/split {separator:"/"}
 
-execute store result storage mchess:stringtools square.rank int 1 run scoreboard players set .stringtools.square.rank mchess 8
+execute store result storage mchess:chesstools square.rank int 1 run scoreboard players set .chesstoools.square.rank mchess 8
 function mchess:board/fen/parse_rank_recursive
