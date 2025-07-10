@@ -1,4 +1,3 @@
-data modify storage mchess:chesstools move set value {}
 data modify storage mchess:chesstools move.piece set from storage mchess:chesstools piece
 data modify storage mchess:chesstools square set from storage mchess:chesstools piece.pos
 execute store result score .chesstoools.square.file mchess run data get storage mchess:chesstools square.file
