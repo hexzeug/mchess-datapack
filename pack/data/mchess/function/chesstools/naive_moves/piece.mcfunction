@@ -7,5 +7,5 @@ execute if data storage mchess:chesstools piece{type:""} run function mchess:che
 execute if data storage mchess:chesstools piece{type:"R"} run function mchess:chesstools/naive_moves/rook
 execute if data storage mchess:chesstools piece{type:"N"} run function mchess:chesstools/naive_moves/knight
 execute if data storage mchess:chesstools piece{type:"B"} run function mchess:chesstools/naive_moves/bishop
-# execute if data storage mchess:chesstools piece{type:"Q"} run function mchess:chesstools/naive_moves/queen
+execute if data storage mchess:chesstools piece{type:"Q"} run function mchess:chesstools/naive_moves/queen
 # execute if data storage mchess:chesstools piece{type:"K"} run function mchess:chesstools/naive_moves/king
