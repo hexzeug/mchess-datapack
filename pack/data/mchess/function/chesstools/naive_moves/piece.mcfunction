@@ -4,7 +4,7 @@ execute store result score .chesstools.square.file mchess run data get storage m
 execute store result score .chesstools.square.rank mchess run data get storage mchess:chesstools square.rank
 
 execute if data storage mchess:chesstools piece{type:""} run function mchess:chesstools/naive_moves/pawn with storage mchess:chesstools piece
-# execute if data storage mchess:chesstools piece{type:"R"} run function mchess:chesstools/naive_moves/rook
+execute if data storage mchess:chesstools piece{type:"R"} run function mchess:chesstools/naive_moves/rook
 execute if data storage mchess:chesstools piece{type:"N"} run function mchess:chesstools/naive_moves/knight
 execute if data storage mchess:chesstools piece{type:"B"} run function mchess:chesstools/naive_moves/bishop
 # execute if data storage mchess:chesstools piece{type:"Q"} run function mchess:chesstools/naive_moves/queen
