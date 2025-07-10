@@ -29,4 +29,4 @@ data remove storage mchess:stringtools backup[-1]
 execute if data storage mchess:chesstools piece run scoreboard players set .stringtools.value mchess 1
 
 # increment by piece width
-execute store result storage mchess:chesstools square.file int 1 run scoreboard players operation .chesstoools.square.file mchess += .stringtools.value mchess
+execute store result storage mchess:chesstools square.file int 1 run scoreboard players operation .chesstools.square.file mchess += .stringtools.value mchess
