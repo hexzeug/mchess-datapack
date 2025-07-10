@@ -15,7 +15,7 @@ execute if data storage mchess:stringtools {char:'K'} run data modify storage mc
 
 # add piece to board
 execute if data storage mchess:chesstools piece run data modify storage mchess:chesstools piece.pos set from storage mchess:chesstools square
-data modify storage mchess:board pieces append from storage mchess:chesstools piece
+data modify storage mchess:chesstools board.pieces append from storage mchess:chesstools piece
 
 # eval piece width for empty square notation
 data modify storage mchess:stringtools backup append from storage mchess:stringtools string

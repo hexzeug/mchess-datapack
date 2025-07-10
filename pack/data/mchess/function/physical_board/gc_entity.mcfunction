@@ -1,1 +1,1 @@
-$execute unless data storage mchess:board pieces[{entity:$(UUID)}] run kill @s
+$execute unless data storage mchess:chesstools board.pieces[{entity:$(UUID)}] run kill @s
