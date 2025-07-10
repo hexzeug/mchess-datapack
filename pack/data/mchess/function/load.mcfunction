@@ -4,6 +4,8 @@ forceload add -1 -1 0 0
 place template mchess:board/planks 0 127 0
 
 scoreboard objectives add mchess dummy
+scoreboard players set #pawn.w mchess 1
+scoreboard players set #pawn.b mchess -1
 
 # ray calculation
 scoreboard objectives add mchess.ray.x dummy
