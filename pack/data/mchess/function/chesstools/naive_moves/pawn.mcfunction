@@ -1,7 +1,7 @@
 # Naive Pawn Moves (excludes en passant)
 
 # 1 forwards
-$execute store result storage mchess:chesstools move.square.rank int 1 run scoreboard players operation .chesstools.rank mchess += #pawn.$(color) mchess
+function mchess:chesstools/naive_moves/pawn.macro with storage mchess:chesstools move.piece
 
 # 1 queenwards
 execute store result storage mchess:chesstools move.square.file int 1 run scoreboard players remove .chesstools.file mchess 1
@@ -29,8 +29,7 @@ data modify storage mchess:chesstools moves append from storage mchess:chesstool
 execute unless data storage mchess:chesstools move.piece{color:"w",pos:{rank:2}} unless data storage mchess:chesstools move.piece{color:"b",pos:{rank:7}} run return 1
 
 # 1 forwards
-$execute store result storage mchess:chesstools move.square.rank int 1 run scoreboard players operation .chesstools.rank mchess += #pawn.$(color) mchess
-
+function mchess:chesstools/naive_moves/pawn.macro with storage mchess:chesstools move.piece
 # double pushes
 execute if function mchess:chesstools/naive_moves/square unless data storage mchess:chesstools move.capture run data modify storage mchess:chesstools moves append from storage mchess:chesstools move
 return 1
