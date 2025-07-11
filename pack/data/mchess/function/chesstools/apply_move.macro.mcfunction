@@ -1,0 +1,1 @@
+$execute if data storage mchess:chesstools board.pieces[$(piece)] run data modify storage mchess:chesstools board.pieces[$(piece)].pos set from storage mchess:chesstools move.square
