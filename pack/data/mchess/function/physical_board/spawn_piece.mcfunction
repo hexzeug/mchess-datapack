@@ -1,5 +1,6 @@
 summon text_display ~ ~ ~ {Tags:["mchess","mchess.piece"],text:"",Rotation:[90f,-90f],billboard:"vertical",teleport_duration:2,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.1875f,-1.1875f,0f],scale:[10f,10f,10f]},background:0}
-data modify storage mchess:chesstools piece.entity set from entity @n[tag=mchess.piece,nbt={text:""}] UUID
+# data modify storage mchess:chesstools piece.entity set from entity @n[tag=mchess.piece,nbt={text:""}] UUID
+# TODO: smart animations without uuid
 
 execute if data storage mchess:chesstools piece{color:"w",type:"K"} run data merge entity @n[tag=mchess.piece,nbt={text:""}] {text:{text:"\u265A",color:"white"}}
 execute if data storage mchess:chesstools piece{color:"w",type:"Q"} run data merge entity @n[tag=mchess.piece,nbt={text:""}] {text:{text:"\u265B",color:"white"}}

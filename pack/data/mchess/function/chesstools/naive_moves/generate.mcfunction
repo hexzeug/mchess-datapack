@@ -1,2 +1,2 @@
 data modify storage mchess:chesstools moves set value []
-function mchess:chesstools/foreach_piece {callback:"function mchess:chesstools/naive_moves/piece"}
+function mchess:itertools/foreach {callback:"function mchess:chesstools/naive_moves/piece",iterable:"storage mchess:chesstools board.pieces",iterator:"storage mchess:chesstools move.piece"}

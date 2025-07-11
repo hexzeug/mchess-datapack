@@ -26,5 +26,5 @@ data modify storage mchess:chesstools board.move_number set from storage mchess:
 data modify storage mchess:stringtools string set from storage mchess:stringtools segments[0]
 function mchess:stringtools/split {separator:"/"}
 
-execute store result storage mchess:chesstools square.rank int 1 run scoreboard players set .chesstools.square.rank mchess 8
+execute store result storage mchess:chesstools square.rank int 1 run scoreboard players set .chesstools.rank mchess 8
 function mchess:chesstools/notation/fen/parse_rank_recursive
