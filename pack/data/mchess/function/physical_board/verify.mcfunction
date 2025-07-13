@@ -1,0 +1,1 @@
+$execute if data storage mchess:chesstools board.pieces[$(data)] run tag @s remove mchess.piece.wrong
