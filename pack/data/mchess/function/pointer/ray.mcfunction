@@ -46,12 +46,12 @@ scoreboard players operation @s mchess.point.z = @s mchess.ray.dz
 scoreboard players operation @s mchess.point.z *= @s mchess.ray
 scoreboard players operation @s mchess.point.z += @s mchess.ray.z
 
-# debug
+# calculate chess square
+scoreboard players add @s mchess.point.x 2000000
+scoreboard players add @s mchess.point.z 2000000
+execute store result storage mchess:chesstools square.rank int 0.0000005 run scoreboard players get @s mchess.point.x
+execute store result storage mchess:chesstools square.file int 0.0000005 run scoreboard players get @s mchess.point.z
+execute unless score @s mchess.point.x matches 2000000..17999999 run data remove storage mchess:chesstools square
+execute unless score @s mchess.point.z matches 2000000..17999999 run data remove storage mchess:chesstools square
 
-kill @e[tag=mchess.point]
-summon marker 0 0 0 {Tags:["mchess","mchess.point"]}
-execute store result entity @n[tag=mchess.point] Pos[0] double 0.000001 run scoreboard players get @s mchess.point.x
-execute store result entity @n[tag=mchess.point] Pos[1] double 0.000001 run scoreboard players get @s mchess.point.y
-execute store result entity @n[tag=mchess.point] Pos[2] double 0.000001 run scoreboard players get @s mchess.point.z
-
-return run scoreboard players get @s mchess.ray
+return run execute if data storage mchess:chesstools square
