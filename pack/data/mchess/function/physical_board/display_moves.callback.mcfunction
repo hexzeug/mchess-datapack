@@ -1,0 +1,1 @@
+$summon marker ~ ~ ~ {Tags:["mchess","mchess.move","mchess.move.$(color)"]}
