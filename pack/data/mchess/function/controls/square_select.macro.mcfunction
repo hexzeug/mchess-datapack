@@ -1,0 +1,2 @@
+$data modify storage mchess:chesstools moves append from storage mchess:chesstools board.cache.moves[{piece:$(piece)}]
+$data modify storage mchess:chesstools move set from storage mchess:chesstools moves[{square:$(square)}]

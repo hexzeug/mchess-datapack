@@ -16,7 +16,3 @@ team modify mchess.b color black
 scoreboard objectives add mchess dummy
 scoreboard players set #pawn.w mchess 1
 scoreboard players set #pawn.b mchess -1
-
-
-# clear cache
-data remove storage mchess:chesstools board.cache
