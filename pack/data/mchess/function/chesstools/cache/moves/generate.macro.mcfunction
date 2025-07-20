@@ -5,7 +5,9 @@ execute unless data storage mchess:chesstools board.cache.naive_moves run data m
 # append naive moves of active color
 $data modify storage mchess:chesstools board.cache.moves append from storage mchess:chesstools board.cache.naive_moves[{piece:{color:"$(active_color)"}}]
 
-# TODO: en passant
+# append en passant moves
+execute if data storage mchess:chesstools board.en_passant run function mchess:chesstools/cache/moves/en_passant with storage mchess:chesstools board
+
 # TODO: castleing
 
 # generate followups

@@ -1,0 +1,1 @@
+$execute if data storage mchess:chesstools board.pieces[$(piece)] run data modify storage mchess:chesstools board.cache.moves append from storage mchess:chesstools move
