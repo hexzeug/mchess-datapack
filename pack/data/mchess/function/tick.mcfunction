@@ -5,3 +5,5 @@ execute as @e[tag=mchess.move.w] at @s run particle happy_villager ~ ~ ~ 1 1 1 0
 execute as @e[tag=mchess.move.b] at @s run particle happy_villager ~ ~ ~ 1 1 1 0 0 normal @a[team=mchess.b]
 
 function mchess:pointer/tick
+
+function mchess:controls/godmode with storage mchess:chesstools board

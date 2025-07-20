@@ -1,0 +1,1 @@
+$team join mchess.$(active_color) @a[tag=mchess.godmode]
