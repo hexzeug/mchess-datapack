@@ -1,0 +1,1 @@
+function mchess:chesstools/analyze_position

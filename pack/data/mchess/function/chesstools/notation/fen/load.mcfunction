@@ -1,5 +1,5 @@
 # reset board
-data modify storage mchess:chesstools board set value {pieces:[],castling:{b:{short:false,long:false},w:{short:false,long:false}},en_passant:false}
+data modify storage mchess:chesstools board set value {pieces:[]}
 
 # split groups
 function mchess:stringtools/split {separator:" "}

@@ -1,1 +1,2 @@
-tellraw @a [{selector:"@s"},{text:" moved "},{storage:"mchess:chesstools",nbt:"move.piece"},{text:" to "},{storage:"mchess:chesstools",nbt:"move.square"}]
+function mchess:chesstools/commit_move
+function mchess:physical_board/flush
